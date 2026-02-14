@@ -10,6 +10,7 @@ body{
 
 .recipe-card{
     transition:transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
 
 .recipe-card:hover{
@@ -20,4 +21,40 @@ body{
 .card-img-top{
     object-fit: cover;
     height: 200px;
+}
+
+.tag-pill{
+    font-size: 0.75rem;
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+}
+
+.hero-subtitle{
+    font-size: 0.9rem;
+}
+
+.suggested-terms span {
+    display: inline-block;
+    background-color: lightblue;
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    margin: 0.15rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.suggested-terms span:hover{
+    background-color: lightcyan;
+}
+
+.instructions-box{
+    max-height: 260px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+@media (max-width: 576px){
+    .card-img-top{
+        height: 180px;
+    }
 }

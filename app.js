@@ -50,5 +50,17 @@ async function search() {
     }
 }
 
-const card = (m) =>
-    <div></>
+const card = (m) => `
+<div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+  <div class="card recipe-card h-100 w-100">
+    <img src="${esc(m.strMealThumb)}" class="card-img-top" alt="${esc(m.strMeal)}">
+    <div class="card-body d-flex flex-column">
+      <h6 class="card-title mb-1 fw-semibold">${esc(m.strMeal)}</h6>
+      <p class="card-text text-muted mb-2">
+        <span class="badge bg-light text-dark border tag-pill">${esc(m.strArea || "World cuisine")}</span>
+        <span class="badge bg-secondary tag-pill">${esc(m.strCategory || "Dish")}</span>
+      </p>
+      <button class="btn btn-outline-primary btn-sm mt-auto view-btn" data-id="${m.idMeal}">View Details</button>
+    </div>
+  </div>
+</div>`;
